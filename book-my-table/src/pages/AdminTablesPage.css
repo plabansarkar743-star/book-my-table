@@ -1,0 +1,130 @@
+.admin-tables-page {
+  padding-top: calc(var(--nav-height) + var(--space-10));
+  padding-bottom: var(--space-16);
+}
+
+.admin-tables-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.admin-tables-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.admin-tables-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* Summary Bar */
+.table-summary-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+  padding: var(--space-4) var(--space-6);
+  flex-wrap: wrap;
+}
+
+.table-summary-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.table-summary-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.dot-available { background: #10b981; }
+.dot-occupied { background: #ef4444; }
+.dot-maintenance { background: #f59e0b; }
+
+.table-summary-count {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.table-summary-label {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.table-summary-divider {
+  width: 1px;
+  height: 30px;
+  background: var(--color-border);
+  margin: 0 var(--space-2);
+}
+
+/* Content */
+.admin-tables-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.tables-location-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.tables-location-title {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+.tables-location-title::before {
+  content: '';
+  width: 3px;
+  height: 1em;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+.admin-tables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-4);
+}
+
+.admin-table-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.admin-table-btns {
+  display: flex;
+  gap: var(--space-2);
+}
+
+/* Table Form */
+.table-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .admin-tables-header { flex-direction: column; }
+  .admin-tables-grid { grid-template-columns: repeat(2, 1fr); }
+  .table-summary-bar { gap: var(--space-4); }
+}

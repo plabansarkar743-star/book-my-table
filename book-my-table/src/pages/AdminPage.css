@@ -1,0 +1,213 @@
+.admin-lock-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.admin-lock-card {
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.admin-lock-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-lg);
+  background: rgba(201,169,110,0.1);
+  border: 1px solid rgba(201,169,110,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  animation: pulse-glow 3s ease infinite;
+}
+
+.admin-pin-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.admin-pin-input {
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 0.3em;
+}
+
+.admin-pin-hint {
+  font-size: 0.78rem;
+  color: var(--color-text-subtle);
+}
+.admin-pin-hint code {
+  background: var(--color-surface-2);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+}
+
+/* Dashboard */
+.admin-page {
+  padding-top: calc(var(--nav-height) + var(--space-10));
+  padding-bottom: var(--space-16);
+}
+
+.admin-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.admin-title { margin-top: var(--space-2); }
+
+.admin-header-actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.admin-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.admin-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+}
+.admin-section-header h2 { font-size: 1.1rem; }
+
+/* Upcoming */
+.admin-upcoming-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.admin-upcoming-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.admin-upcoming-item:last-child { border-bottom: none; }
+
+.admin-upcoming-time {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  min-width: 70px;
+}
+
+.admin-upcoming-info { flex: 1; }
+.admin-upcoming-name { font-size: 0.9rem; font-weight: 600; }
+.admin-upcoming-meta { font-size: 0.78rem; color: var(--color-text-muted); }
+
+/* Table Status */
+.table-status-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.table-status-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.table-status-item:last-child { border-bottom: none; }
+
+.table-status-num {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  min-width: 28px;
+}
+
+.table-status-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex: 1;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.table-status-cap {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* Quick Stats */
+.admin-quick-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.quick-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-4);
+}
+
+.quick-stat {
+  text-align: center;
+  padding: var(--space-4);
+  background: var(--color-surface-2);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.quick-stat-value {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.quick-stat-label {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 1024px) {
+  .admin-kpis { grid-template-columns: repeat(2, 1fr); }
+  .quick-stats-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .admin-grid { grid-template-columns: 1fr; }
+  .admin-kpis { grid-template-columns: repeat(2, 1fr); }
+  .quick-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
